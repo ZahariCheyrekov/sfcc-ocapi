@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 
+import { useCartContext } from "../contexts/CartContext";
 import SalesforceLogo from "../assets/salesforce.svg";
 
 const Header = () => {
+  const { cartItemsCount } = useCartContext();
+ 
   return (
     <header className="bg-dark text-white">
       <nav className="d-flex align-items-center justify-content-between w-75 m-auto">
@@ -15,7 +18,7 @@ const Header = () => {
         >
           <i className="cart_icon bi bi-handbag text-white"></i>
           <span className="position-absolute top-0 end-0 rounded-circle bg-info p-2 badge">
-            0
+            {cartItemsCount}
           </span>
         </Link>
       </nav>
