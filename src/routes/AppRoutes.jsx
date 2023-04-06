@@ -1,0 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+
+import ProductDetails from "../pages/product/ProductDetails";
+import Cart from "../components/product/Cart";
+import NotFound from "../pages/not-found/NotFound";
+
+const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/:pid" element={<ProductDetails />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/not-found" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+};
+
+export default AppRoutes;
