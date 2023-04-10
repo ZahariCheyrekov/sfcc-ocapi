@@ -1,7 +1,6 @@
 import ProductTile from "./ProductTile";
 
 const CartProducts = ({ cart }) => {
-  console.log(cart);
   return (
     <>
       <article className="cart-product-item cart-product">
