@@ -4,7 +4,6 @@ import {
     AUTH,
     getContentAssetUrl
 } from '../constants/endpoints';
-import { validateToken } from '../utils/validateToken';
 
 /**
  * @function
@@ -12,8 +11,7 @@ import { validateToken } from '../utils/validateToken';
  * @returns {String} Access Token
  */
 export const getAccessToken = async () => {
-    const currentToken = localStorage.getItem('token');
-    const isValid = validateToken(currentToken);
+    const accessToken = localStorage.getItem('token');
 
     const request = {
         method: 'POST',
@@ -23,11 +21,11 @@ export const getAccessToken = async () => {
         },
     };
 
-    if (isValid) {
-        request.headers.Authorization = currentToken;
+    if (accessToken) {
+        request.headers.Authorization = accessToken;
     }
 
-    const type = isValid ? 'refresh' : 'guest';
+    const type = accessToken ? 'refresh' : 'guest';
     const body = { type };
     request.body = JSON.stringify(body);
 
