@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import useContentAsset from "../../hooks/useContentAsset";
+import { THANK_YOU_PAGE_ASSET } from "../../constants/content-assets";
 
 const Order = () => {
   const { orderId } = useParams();
   const [assetBody, setAssetBody] = useState("");
-  const { contentAsset } = useContentAsset("ocapi-thank-you-order");
+  const { contentAsset } = useContentAsset(THANK_YOU_PAGE_ASSET);
 
   useEffect(() => {
     if (contentAsset) {
