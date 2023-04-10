@@ -19,7 +19,6 @@ const Cart = () => {
               className="btn btn-light d-flex align-items-center"
               to="/checkout"
             >
-              <i className="bi bi-cart-check"></i>
               Checkout
             </Link>
           </>
