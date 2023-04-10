@@ -1,0 +1,73 @@
+{
+    "_v": "23.1",
+    "clients": [
+        {
+            "allowed_origins": [
+                "YOUR_DOMAIN_NAME/ALLOWED_ORIGIN"
+            ],
+            "client_id": "YOUR_CLIENT_ID",
+            "resources": [
+                {
+                    "resource_id": "/customers/auth",
+                    "methods": [
+                        "post"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                },
+                {
+                    "resource_id": "/products/**",
+                    "methods": [
+                        "get"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                },
+                {
+                    "resource_id": "/content/**",
+                    "methods": [
+                        "get"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                },
+                {
+                    "resource_id": "/baskets",
+                    "methods": [
+                        "post"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                },
+                {
+                    "resource_id": "/baskets/**",
+                    "methods": [
+                        "post",
+                        "get",
+                        "delete",
+                        "put"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                },
+                {
+                    "resource_id": "/baskets/*",
+                    "methods": [
+                        "post",
+                        "get"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                },
+                {
+                    "resource_id": "/orders",
+                    "methods": [
+                        "post"
+                    ],
+                    "read_attributes": "(**)",
+                    "write_attributes": "(**)"
+                }
+            ]
+        }
+    ]
+}
