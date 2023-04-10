@@ -1,7 +1,8 @@
 import useContentAsset from "../hooks/useContentAsset";
+import { FOOTER_LINKS_ASSET } from "../constants/content-assets";
 
 const Footer = () => {
-  const { contentAsset } = useContentAsset("ocapi-footer-links");
+  const { contentAsset } = useContentAsset(FOOTER_LINKS_ASSET);
 
   return (
     <footer className="bg-dark text-white w-100 position-fixed bottom-0">

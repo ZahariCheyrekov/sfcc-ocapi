@@ -1,5 +1,5 @@
 import * as requester from '../api/requester';
-import {getProductUrl } from '../constants/endpoints';
+import { getProductUrl } from '../constants/endpoints';
 
 /**
  * @function
